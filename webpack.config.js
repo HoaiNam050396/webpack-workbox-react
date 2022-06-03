@@ -23,7 +23,7 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(png|svg|gif|jpg)?$/,
+        test: /\.(png|svg|gif|j?g)?$/,
         use: 'flie-loader?name=./images/[name].[ext]'
       },
     ],
@@ -31,5 +31,6 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     template: path.resolve(__dirname, 'public/index.html'),
     filename: 'index.html',
+    title: "Demo webpack workbox"
   })],
 };
